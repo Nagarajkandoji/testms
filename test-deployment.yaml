@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: testapp-deployment
+  labels:
+    app: test
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      env: test
+  template:
+    metadata:
+      labels:
+        env: test
+    spec:
+      containers:
+      - name: testapp
+        image: nagarajkandoji/node_test
+        ports:
+        - containerPort: 8080

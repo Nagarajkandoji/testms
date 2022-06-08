@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: pod
+metadata:
+  name: testapp
+  labels:
+    app: testapp
+spec:
+  containers:
+    - name: testapp
+      image: nagarajkandoji/node_test
+      ports:
+        - containerPort: 8080
